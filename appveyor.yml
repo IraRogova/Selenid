@@ -6,9 +6,11 @@ branches:
     - master
 
 build: off
+
 install:
   - chmod +x gradlew
   - java -jar ./artifacts/app-order.jar &
+  - chmod +x ./driver/linux/chromedriver
 
 build_script:
   - ./gradlew test --info
